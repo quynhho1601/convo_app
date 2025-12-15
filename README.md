@@ -36,9 +36,9 @@ cd prompto
 
 #### 2. Start the Backend
 ```bash
-cd server
-npm install
-npm start
+cd back_end
+conda activate <your-python-env>
+python run.py 
 ```
 
 #### 3. Start the Frontend
