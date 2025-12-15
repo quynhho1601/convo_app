@@ -1,0 +1,157 @@
+/* css/DisplayBox.css */
+
+.response-content {
+    background: #ffffff;
+    padding: 0;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 600px;
+    border: 1px solid #e4e4e7;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    max-height: 85vh;
+}
+
+.response-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #f4f4f5;
+    flex-shrink: 0;
+}
+
+.response-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.response-close-button {
+    background: none;
+    border: none;
+    color: #71717a;
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s ease;
+}
+
+.response-close-button:hover {
+    color: #18181b;
+}
+
+.response-scroll-area {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 1.5rem;
+    color: #3f3f46;
+    min-height: 0; /* Ensures correct scroll behavior in flexbox */
+}
+
+.prompt-paragraph {
+    /* Base text styles */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    white-space: pre-wrap; /* Render newlines */
+    color: inherit; /* Inherit color from parent */
+
+    /* Textarea-specific reset styles */
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+    transition: box-shadow 0.2s;
+}
+
+.prompt-paragraph:focus {
+    box-shadow: 0 0 0 3px rgba(117, 174, 255, 0.25);
+    border-radius: 4px;
+}
+
+/* Save Form */
+.save-prompt-form {
+    padding: 1.5rem;
+    border-top: 1px solid #f4f4f5;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex-shrink: 0;
+}
+
+.input-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.title-input {
+    flex: 2;
+}
+
+.tags-input {
+    flex: 1;
+}
+
+.prompt-input {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 0.95rem;
+    border: 1px solid #e4e4e7;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #18181b;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+.prompt-input:focus {
+    outline: none;
+    border-color: #75aeff;
+    box-shadow: 0 0 0 3px rgba(117, 174, 255, 0.25);
+}
+
+.save-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #18181b;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: background-color 0.2s;
+}
+.save-button:hover {
+    background-color: #3f3f46;
+}
+
+.error-message {
+    color: #ef4444;
+    font-size: 0.9rem;
+    margin-top: -0.5rem;
+    margin-bottom: 0;
+}
+
+/* Custom Scrollbar Styles */
+.response-scroll-area::-webkit-scrollbar {
+    width: 8px;
+}
+
+.response-scroll-area::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.response-scroll-area::-webkit-scrollbar-thumb {
+    background-color: #d4d4d8;
+    border-radius: 20px;
+}
+
+.response-scroll-area::-webkit-scrollbar-thumb:hover {
+    background-color: #a1a1aa;
+}

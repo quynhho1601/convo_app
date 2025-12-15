@@ -1,0 +1,5 @@
+{
+  "name": "Prompto",
+  "description": "A simple page with a button that opens a pop-up box to paste a JSON object.",
+  "requestFramePermissions": []
+}

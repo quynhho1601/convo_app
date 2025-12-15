@@ -1,0 +1,14 @@
+# Python
+venv/
+back_end/venv/
+__pycache__/
+
+# JS / Frontend
+node_modules/
+.next/
+dist/
+build/
+
+# Secrets
+.env
+.env.local

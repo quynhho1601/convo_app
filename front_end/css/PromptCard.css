@@ -1,0 +1,110 @@
+.prompt-card {
+    background-color: #ffffff;
+    border: 1px solid #e4e4e7;
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 220px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    cursor: pointer;
+    position: relative; /* Needed for absolute positioning of action buttons */
+}
+
+.prompt-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.07);
+}
+
+.prompt-card-content {
+    flex-grow: 1;
+}
+
+.prompt-card-description {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+    color: #52525b;
+    line-height: 1.5;
+    /* Show about 4 lines of text */
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.prompt-card-footer {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #f4f4f5;
+}
+
+.prompt-card-title {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+}
+
+.prompt-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.prompt-card-tag {
+    background-color: #f4f4f5;
+    color: #52525b;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* Action Buttons Styles */
+.prompt-card-bottom-actions {
+    position: absolute;
+    right: 0.75rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    z-index: 10;
+    bottom: 0.75rem;
+    display: flex;
+    gap: 0.25rem;
+}
+
+.prompt-card:hover .prompt-card-bottom-actions {
+    opacity: 1;
+    visibility: visible;
+}
+
+.prompt-card-action-button {
+    background: transparent;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #a1a1aa; /* Muted icon color */
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.prompt-card-action-button:hover {
+    background-color: #f4f4f5;
+    color: #18181b;
+}
+
+.prompt-card-action-button.delete-button:hover {
+    color: #ef4444; /* Red for destructive action */
+    background-color: #fee2e2; /* Light red background */
+}
+
+.prompt-card-action-button.copied,
+.prompt-card-action-button.downloaded {
+    color: #22c55e; /* Green confirmation color */
+}

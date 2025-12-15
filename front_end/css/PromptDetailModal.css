@@ -1,0 +1,101 @@
+/* css/PromptDetailModal.css */
+
+.prompt-detail-modal {
+    background: #ffffff;
+    padding: 0;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 700px;
+    border: 1px solid #e4e4e7;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    max-height: 80vh; /* Limit height to 80% of viewport */
+}
+
+.prompt-detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #f4f4f5;
+    flex-shrink: 0;
+}
+
+.prompt-detail-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin: 0;
+    /* Truncate long titles */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 1rem;
+}
+
+.prompt-detail-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.prompt-detail-close-button {
+    background: none;
+    border: none;
+    color: #71717a;
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0 0.5rem;
+    margin-left: 0.5rem;
+    transition: color 0.2s ease;
+}
+.prompt-detail-close-button:hover {
+    color: #18181b;
+}
+
+.prompt-detail-body {
+    flex-grow: 1;
+    overflow-y: auto; /* Make description scrollable */
+    padding: 1.5rem;
+}
+
+/* Custom Scrollbar for Modal Body */
+.prompt-detail-body::-webkit-scrollbar {
+    width: 8px;
+}
+.prompt-detail-body::-webkit-scrollbar-track {
+    background: transparent;
+}
+.prompt-detail-body::-webkit-scrollbar-thumb {
+    background-color: #d4d4d8;
+    border-radius: 20px;
+}
+.prompt-detail-body::-webkit-scrollbar-thumb:hover {
+    background-color: #a1a1aa;
+}
+
+
+.prompt-detail-description {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.95rem;
+    color: #3f3f46;
+    line-height: 1.6;
+    white-space: pre-wrap; /* Preserve line breaks from description */
+    word-wrap: break-word;
+}
+
+.prompt-detail-footer {
+    padding: 1rem 1.5rem;
+    border-top: 1px solid #f4f4f5;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.prompt-detail-actions .prompt-card-action-button {
+    opacity: 1;
+    visibility: visible;
+    position: static;
+}

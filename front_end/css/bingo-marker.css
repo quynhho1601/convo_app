@@ -1,0 +1,149 @@
+.bingo-marker {
+    /* Define CSS variables for positioning via transform */
+    --dx: 0px;
+    --dy: 0px;
+
+    position: absolute; /* Position markers absolutely within the token area */
+    width: 64px;
+    height: 64px;
+    background-color: #1b1b22;
+    border-radius: 12px; /* rounded-full */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.7),
+        0 2px 4px -2px rgba(0, 0, 0, 0.6),
+        inset 0 2px 4px 0 rgba(255, 255, 255, 0.05);
+    transition: transform 200ms ease-in-out, box-shadow 200ms ease-in-out, outline-color 200ms ease-in-out;
+    cursor: grab; /* Indicate draggability */
+    transform: translate(var(--dx), var(--dy));
+    user-select: none; /* Prevent text selection during drag */
+    outline: 3px solid transparent;
+    outline-offset: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto; /* Re-enable mouse events for this element */
+}
+
+.bingo-marker::after {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background-color: #1b1b22;
+    bottom: -6px;
+    left: 12px;
+    transform: rotate(45deg);
+    border-radius: 3px;
+    z-index: -1; /* Place the tail behind the main bubble */
+}
+
+.bingo-marker:hover {
+    transform: translate(var(--dx), var(--dy)) scale(1.05);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1), inset 0 2px 4px 0 rgb(255 255 255 / 0.5);
+    z-index: 101; /* Bring marker and tooltip to front on hover */
+}
+
+.bingo-marker.dragging {
+    cursor: grabbing;
+    /* Enhance shadow for a "lifted" effect */
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.15), 0 8px 10px -6px rgb(0 0 0 / 0.15), inset 0 2px 4px 0 rgb(255 255 255 / 0.5);
+    transform: translate(var(--dx), var(--dy)) scale(1.1);
+}
+
+.bingo-marker.selected {
+    outline-color: #75aeff;
+}
+
+.special-marker .marker-label {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    color: #212121;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.special-marker .label-divider {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    width: 50%;
+    height: 1.5px;
+    background-color: #212121;
+    transform: translateY(-50%) rotate(-25deg);
+}
+
+/* Custom Tooltip Styles */
+.bingo-marker-tooltip {
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    color: #18181b;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border: 1px solid #e4e4e7;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+    z-index: 110;
+}
+
+.bingo-marker-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #ffffff transparent transparent transparent;
+}
+
+.bingo-marker:hover .bingo-marker-tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+.node-order-badge {
+    color: #ffffff; /* Softer dark gray for less contrast */
+    font-size: 1.75rem; /* Larger, more prominent number */
+    font-weight: 500; /* Medium weight for a modern feel */
+    line-height: 1; /* Ensure tight vertical alignment */
+    /* No background, border, or absolute positioning for a minimal look */
+}
+
+.classification-icon {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    font-size: 20px;
+    z-index: 5;
+
+    width: 32px;
+    height: 32px;               /* equal width + height = true circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(8px) saturate(180%);
+    -webkit-backdrop-filter: blur(8px) saturate(180%);
+
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.15),
+        inset 0 1px 1px rgba(255, 255, 255, 0.4);
+}
+

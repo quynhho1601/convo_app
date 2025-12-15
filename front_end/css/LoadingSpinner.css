@@ -1,0 +1,30 @@
+
+/* css/LoadingSpinner.css */
+
+.spinner-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(244, 244, 245, 0.5); /* Use light gray from theme */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000; /* Higher than other modals */
+    backdrop-filter: blur(4px);
+}
+
+.spinner {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #e4e4e7; /* Light border color */
+    border-top: 5px solid #18181b; /* Dark main color */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
