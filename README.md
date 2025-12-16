@@ -18,7 +18,7 @@ Prompto allows users to import past LLM chat histories and interact with them vi
 
 ## Demo
 
-Video Link: https://drive.google.com/drive/my-drive?dmr=1&ec=wgc-drive-hero-goto
+Video Link: https://drive.google.com/file/d/1oO_w5WH79VW9iOEg0KGgV_Enkf1s9mEt/view?usp=sharing
 
 ## 📁 Repository Structure
 
