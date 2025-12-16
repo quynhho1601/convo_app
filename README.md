@@ -16,6 +16,10 @@ Prompto allows users to import past LLM chat histories and interact with them vi
 
 - Saves generated prompts in a reusable log
 
+## Demo
+
+Video Link: https://drive.google.com/drive/my-drive?dmr=1&ec=wgc-drive-hero-goto
+
 ## 📁 Repository Structure
 
 ```text
