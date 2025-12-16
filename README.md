@@ -6,19 +6,15 @@ Prompto is an open-source visual tool that helps programmers organize, inspect, 
 
 Prompto allows users to import past LLM chat histories and interact with them visually:
 
-- Parses multi-turn chat transcripts into individual prompt nodes
+- Extracts prompts into numbered nodes
 
-- Displays prompts in a two-dimensional workspace with turn numbering
+- Organizes prompts in a 2D workspace
 
-- Visually distinguishes redundant and non-duplicate prompts
+- Highlights redundancy and missing components
 
-- Provides a structured canvas to assess prompt completeness
+- Supports prompt consolidation and reuse
 
-- Enables prompt consolidation into concise, reusable instructions
-
-- Maintains a prompt log for review, download, and sharing
-
-## File Structure 
+- Saves generated prompts in a reusable log
 
 ## 📁 Repository Structure
 
