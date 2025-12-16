@@ -20,39 +20,42 @@ Prompto allows users to import past LLM chat histories and interact with them vi
 
 ## File Structure 
 
+## 📁 Repository Structure
+
+```text
 convo/
-├── back_end/                # Backend (Flask)
+├── back_end/                 # Backend (Flask)
 │   ├── app/
-│   │   ├── routes/          # API route definitions
+│   │   ├── routes/           # API route definitions
 │   │   │   ├── classification.py
 │   │   │   └── generate_prompt.py
-│   │   ├── services/        # Core business logic
+│   │   ├── services/         # Core business logic
 │   │   │   ├── classification_service.py
 │   │   │   └── promptgen_service.py
-│   │   └── utils/           # Configuration and helpers
+│   │   └── utils/            # Configuration and helpers
 │   │       └── config.py
-│   ├── run.py               # Backend entry point
-│   ├── test_env.py          # Environment test script
-│   ├── requirements.txt     # Python dependencies
-│   ├── .env                 # Backend environment variables
-│   └── venv/                # Python virtual environment (local)
+│   ├── run.py                # Backend entry point
+│   ├── test_env.py           # Environment test script
+│   ├── requirements.txt      # Python dependencies
+│   ├── .env                  # Backend environment variables
+│   └── venv/                 # Python virtual environment (local)
 │
-├── front_end/               # Frontend (React + TypeScript)
-│   ├── components/          # UI components
-│   ├── css/                 # Stylesheets
-│   ├── src/                 # Frontend source code
-│   ├── App.tsx              # Main React component
-│   ├── index.tsx            # Frontend entry point
-│   ├── index.html           # HTML template
-│   ├── metadata.json        # App metadata
-│   ├── package.json         # Frontend dependencies
+├── front_end/                # Frontend (React + TypeScript)
+│   ├── components/           # UI components
+│   ├── css/                  # Stylesheets
+│   ├── src/                  # Frontend source code
+│   ├── App.tsx               # Main React component
+│   ├── index.tsx             # Frontend entry point
+│   ├── index.html            # HTML template
+│   ├── metadata.json         # App metadata
+│   ├── package.json          # Frontend dependencies
 │   ├── package-lock.json
-│   ├── tsconfig.json        # TypeScript configuration
-│   └── .env.local           # Frontend environment variables
+│   ├── tsconfig.json         # TypeScript configuration
+│   └── .env.local            # Frontend environment variables
 │
 ├── .gitignore
 └── README.md
-
+```
 ## 🛠️ Development
 
 ### Prerequisites
