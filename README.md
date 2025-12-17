@@ -1,10 +1,10 @@
-# Prompto
+# Convo
 
-Prompto is an open-source visual tool that helps programmers organize, inspect, and consolidate multi-turn prompts from LLM chat histories into reusable prompt artifacts.
+Convo is an open-source visual tool that helps programmers organize, inspect, and consolidate multi-turn prompts from LLM chat histories into reusable prompt artifacts.
 
 ## 🛠️ What it does
 
-Prompto allows users to import past LLM chat histories and interact with them visually:
+Convo allows users to import past LLM chat histories and interact with them visually:
 
 - Extracts prompts into numbered nodes
 
@@ -67,8 +67,8 @@ convo/
 
 #### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/prompto.git
-cd prompto
+git https://github.com/quynhho1601/convo_app.git
+cd convo_app
 ```
 
 #### 2. Start the Backend
@@ -80,18 +80,14 @@ python run.py
 
 #### 3. Start the Frontend
 ```bash
-cd client
+cd front_end
 npm install
 npm run dev
 ```
 
-### Local URLs
-- **Frontend**: http://localhost:5173
-- **Backend**: http://localhost:5000
-
 ## 📂 Importing Chat Histories
 
-Prompto works with exported chat histories from common LLM platforms:
+Convo works with exported chat histories from common LLM platforms:
 
 - **Claude**: [Settings → Privacy → Export data](https://support.claude.com/en/articles/9450526-how-can-i-export-my-claude-data) (official documentation)
 - **ChatGPT**: [Settings → Data Controls → Export Data](https://help.openai.com/en/articles/7260999-how-do-i-export-my-chatgpt-history-and-data) (official OpenAI documentation)
